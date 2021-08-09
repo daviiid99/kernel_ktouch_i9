@@ -1,2 +1,3 @@
-# kernel_ktouch_i9
-4.14+ Linux Kernel for KTOUCH-i9
+# Linux Kernel Source| KTOUCH i9
+
+<img src="https://image.flaticon.com/icons/png/512/25/25719.png">
