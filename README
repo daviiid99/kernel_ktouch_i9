@@ -1,18 +1,42 @@
-Linux kernel
-============
+# Linux Kernel Source| KTOUCH i9
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/MediaTek_logo.svg/1280px-MediaTek_logo.svg.png">
 
-This file was moved to Documentation/admin-guide/README.rst
 
-Please notice that there are several guides for kernel developers and users.
-These guides can be rendered in a number of formats, like HTML and PDF.
+# Building ALPS 4.14 LTS kernel (WIP)
+<br/>
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.
+## Set up kernel source
+```
+git clone -b 4.14 https://github.com/daviiid99/kernel_ktouch_i9 kernel/ktouch/i9
+cd  kernel/ktouch/i9
+git remote add android-4.14-q https://android.googlesource.com/kernel/common 
+git fetch android-4.14-q
+cd arch/arm64/configs&&mv k39tv1_64_bsp_defconfig lineage_i9_defconfig
+```
 
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
-See Documentation/00-INDEX for a list of what is contained in each file.
+## Utils downloads
+```
+wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/android-10.0.0_r3/clang-r353983c.tar.gz&& mkdir clang&&tar -xvf clang-r353983c.tar.gz clang  
+wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/
+PATH="clang/bin:aarch64-linux-android-4.9/bin:${PATH}" 
+```
 
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+## Kernel settings
+```
+make clean CC=clang
+make mrproper CC=clang
+export ARCH=arm64
+make lineage_i9_defconfig CC=clang
+```
+
+## Building Kernel
+```
+make  CC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- 
+```
+                  
+
+
+
+                  
+
+
