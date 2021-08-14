@@ -86,7 +86,7 @@
 /* Let the trace headers be reread */
 #define TRACE_HEADER_MULTI_READ
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 /* Make all open coded DECLARE_TRACE nops */
 #undef DECLARE_TRACE
