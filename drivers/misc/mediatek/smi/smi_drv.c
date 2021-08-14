@@ -30,8 +30,8 @@
 #endif
 
 #include <smi_conf.h>
-#include <smi_public.h>
-#include <smi_pmqos.h>
+#include "smi_public.h"
+#include "smi_pmqos.h"
 #if IS_ENABLED(CONFIG_MTK_MMDVFS)
 #include <mmdvfs_pmqos.h>
 #endif
@@ -46,7 +46,7 @@
 #include <m4u.h>
 #endif
 #ifdef MMDVFS_HOOK
-#include <mmdvfs_mgr.h>
+#include "mmdvfs_mgr.h"
 #endif
 
 #if IS_ENABLED(CONFIG_MTK_TINYSYS_SSPM_SUPPORT)
