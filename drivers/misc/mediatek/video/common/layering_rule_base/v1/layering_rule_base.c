@@ -1100,11 +1100,6 @@ static bool has_hrt_limit(struct disp_layer_info *disp_info, int disp_idx)
 		DISP_SESSION_DECOUPLE_MIRROR_MODE) ||
 		disp_info->disp_mode[disp_idx] == DISP_SESSION_DECOUPLE_MODE)
 		return false;
-
-	if (l_rule_ops->has_hrt_limit)
-		return l_rule_ops->has_hrt_limit(disp_info, disp_idx);
-
-	return true;
 }
 
 /**
