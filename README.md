@@ -11,7 +11,6 @@ git clone -b 4.14 https://github.com/daviiid99/kernel_ktouch_i9 kernel/ktouch/i9
 cd  kernel/ktouch/i9
 git remote add android-4.14-q https://android.googlesource.com/kernel/common 
 git fetch android-4.14-q
-cd arch/arm64/configs&&mv k39tv1_64_bsp_defconfig lineage_i9_defconfig
 ```
 
 ## Utils downloads
