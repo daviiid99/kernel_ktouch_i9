@@ -87,5 +87,5 @@ static inline void perf_test_probe_##call(void)				\
 #define DEFINE_EVENT_PRINT(template, name, proto, args, print)	\
 	DEFINE_EVENT(template, name, PARAMS(proto), PARAMS(args))
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 #endif /* CONFIG_PERF_EVENTS */
