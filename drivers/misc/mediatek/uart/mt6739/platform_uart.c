@@ -27,8 +27,8 @@
 #endif /* defined(CONFIG_MTK_LEGACY) && !defined (CONFIG_FPGA_EARLY_PORTING)*/
 
 #include <linux/delay.h>
-#include "include/mtk_uart.h"
-#include "include/mtk_uart_intf.h"
+#include "mtk_uart.h"
+#include "mtk_uart_intf.h"
 #include <linux/of_irq.h>
 #include <linux/of_address.h>
 #include <linux/ratelimit.h>
