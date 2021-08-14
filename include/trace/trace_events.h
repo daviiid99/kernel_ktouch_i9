@@ -218,7 +218,7 @@ TRACE_MAKE_SYSTEM_STR();
 #undef TRACE_EVENT_PERF_PERM
 #define TRACE_EVENT_PERF_PERM(event, expr...)
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 /*
  * Stage 3 of the trace events.
@@ -391,7 +391,7 @@ static struct trace_event_functions trace_event_type_funcs_##call = {	\
 	.trace			= trace_raw_output_##call,		\
 };
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 #undef __field_ext
 #define __field_ext(type, item, filter_type)				\
@@ -463,7 +463,7 @@ trace_event_define_fields_##call(struct trace_event_call *event_call)	\
 #define DEFINE_EVENT_PRINT(template, name, proto, args, print)	\
 	DEFINE_EVENT(template, name, PARAMS(proto), PARAMS(args))
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 /*
  * remember the offset of each array from the beginning of the event.
@@ -543,7 +543,7 @@ static inline notrace int trace_event_get_offsets_##call(		\
 #define DEFINE_EVENT_PRINT(template, name, proto, args, print)	\
 	DEFINE_EVENT(template, name, PARAMS(proto), PARAMS(args))
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 /*
  * Stage 4 of the trace events.
@@ -736,7 +736,7 @@ static inline void ftrace_test_probe_##call(void)			\
 #undef DEFINE_EVENT_PRINT
 #define DEFINE_EVENT_PRINT(template, name, proto, args, print)
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 #undef __entry
 #define __entry REC
@@ -800,4 +800,4 @@ static struct trace_event_call __used event_##call = {			\
 static struct trace_event_call __used					\
 __attribute__((section("_ftrace_events"))) *__event_##call = &event_##call
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
