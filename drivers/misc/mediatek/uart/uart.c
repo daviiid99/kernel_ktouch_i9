@@ -53,8 +53,8 @@
 #include <linux/slab.h>
 #include <linux/delay.h>
 #include <linux/syscore_ops.h>
-#include "include/mtk_uart.h"
-#include "include/mtk_uart_intf.h"
+#include <include/mtk_uart.h>
+#include <include/mtk_uart_intf.h>
 #include <linux/version.h>
 #include <linux/suspend.h>
 #include <linux/of.h>
