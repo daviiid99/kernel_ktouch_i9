@@ -151,7 +151,7 @@ TRACE_MAKE_SYSTEM_STR();
 #define TRACE_EVENT_PERF_PERM(name, expr...)				\
 	__TRACE_EVENT_PERF_PERM(name, expr)
 
-#include TRACE_INCLUDE(TRACE_INCLUDE_FILE)
+#include <../../drivers/misc/mediatek/eccci/hif/modem_cldma_events.h>
 
 /*
  * Stage 2 of the trace events.
