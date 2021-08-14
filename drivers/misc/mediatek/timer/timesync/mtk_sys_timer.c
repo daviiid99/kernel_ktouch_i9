@@ -32,7 +32,7 @@
 #include <linux/math64.h>
 #include <mt-plat/sync_write.h>
 #include <mt-plat/mtk_sys_timer.h>
-#include <mtk_sys_timer_typedefs.h>
+#include "mtk_sys_timer_typedefs.h"
 
 #ifdef CONFIG_MTK_TINYSYS_SSPM_SUPPORT
 #include <mtk_sys_timer_mbox.h>
